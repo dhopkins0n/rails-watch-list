@@ -22,7 +22,7 @@ end
 
   def index
     @lists = List.all
-    raise
+
   end
 
 
