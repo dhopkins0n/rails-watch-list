@@ -1,11 +1,21 @@
+<div class="banner">
+<i class="fa-solid fa-clapperboard fa-bounce"></i>
+     <%= link_to "add list", new_list_path(@list) %>
+</div>
+
+<div class="container">
+  <div class="cards">
 
 
-<div id="lists">
   <% @lists.each do |list| %>
-    <%= list.name%>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
+    <%= link_to list_path(list) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg);">
+          <%= list.name%>
 
+      </div>
+    <%end %>
   <% end %>
-  <%= link_to "add list", new_list_path(@list) %>
+
+
+  </div>
+</div>
